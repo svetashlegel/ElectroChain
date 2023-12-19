@@ -1,3 +1,4 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, permissions, generics
 
 from nodes.models import NetworkNode, Contact, Product
@@ -23,6 +24,8 @@ class ProductViewSet(viewsets.ModelViewSet):
 class NetworkNodeViewSet(viewsets.ModelViewSet):
     serializer_class = NetworkNodeSerializer
     queryset = NetworkNode.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['contact__country']
     permission_classes = [
         permissions.AllowAny
     ]
