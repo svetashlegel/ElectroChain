@@ -25,4 +25,5 @@ class NetworkNodeSerializer(serializers.ModelSerializer):
         model = NetworkNode
         fields = ['id', 'name', 'node_type', 'contact', 'supplier', 'debt', 'product_list', 'contact_information',
                   'created_at']
+        read_only_fields = ['debt', 'created_at']
 
