@@ -3,6 +3,9 @@ from users.models import User
 
 
 class Command(BaseCommand):
+    """
+    Command to create an admin. The admin user has access to the admin panel.
+    """
 
     def handle(self, *args, **options):
         email_adress = input("email ")

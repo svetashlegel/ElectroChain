@@ -3,6 +3,9 @@ from users.models import User
 
 
 class Command(BaseCommand):
+    """
+    Command to create a user. Only the active user can interact with the API.
+    """
 
     def handle(self, *args, **options):
         email_adress = input("email ")
