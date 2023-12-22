@@ -49,7 +49,7 @@ To work with the platform, authorization is required. To do this, use your email
 ![img_1.png](img_1.png)
 
 ### Work with API
-You can read full documentation at <host>/docs/ or <host>/redoc/. It describes the details of working with the project API.
+You can read full documentation at `<host>/docs/` or `<host>/redoc/`. It describes the details of working with the project API.
 
 ### Admin panel
-Access the admin panel at <host>/admin to manage the network nodes. The admin panel provides functionalities to create, update, view, and delete network nodes, along with the custom functionalities mentioned above.
+Access the admin panel at `<host>/admin` to manage the network nodes. The admin panel provides functionalities to create, update, view, and delete network nodes, along with the custom functionalities mentioned above.
