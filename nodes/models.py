@@ -6,6 +6,10 @@ NULLABLE = {'blank': True, 'null': True}
 
 
 class Contact(models.Model):
+    """
+    Represents contact information associated with a network node.
+    """
+
     email = models.EmailField(verbose_name='email')
     country = models.CharField(max_length=100, verbose_name='страна')
     city = models.CharField(max_length=100, verbose_name='город')
@@ -21,6 +25,11 @@ class Contact(models.Model):
 
 
 class NetworkNode(models.Model):
+    """
+    Represents a node in the electronic sales network hierarchy, which can be a factory, retail network,
+    or individual entrepreneur.
+    """
+
     NODE_TYPES = [
         ('Factory', 'Factory'),
         ('Retail Network', 'Retail Network'),
@@ -43,6 +52,10 @@ class NetworkNode(models.Model):
 
 
 class Product(models.Model):
+    """
+    Represents a product, belonging to the node.
+    """
+
     title = models.CharField(max_length=200, verbose_name='название')
     model = models.CharField(max_length=100, verbose_name='модель')
     release_date = models.DateField(verbose_name='дата выхода товара')

@@ -5,6 +5,10 @@ from nodes.actions import clear_debts
 
 
 class NetworkNodeAdmin(admin.ModelAdmin):
+    """
+    Admin interface configuration for NetworkNode model.
+    """
+
     list_display = ('id', 'name', 'node_type', 'contact', 'supplier', 'debt', 'created_at')
     list_display_links = ['supplier']
     search_fields = ('id', 'name', 'node_type')

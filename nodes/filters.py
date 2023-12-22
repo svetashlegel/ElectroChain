@@ -3,6 +3,8 @@ from .models import Contact
 
 
 class CityFilter(admin.SimpleListFilter):
+    """Filter that allows you to filter network nodes by city of registration"""
+
     title = 'город'
     parameter_name = 'city'
 
